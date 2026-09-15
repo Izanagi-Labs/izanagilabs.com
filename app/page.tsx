@@ -15,6 +15,7 @@ export default function Home() {
             height={100}
             className="object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
             priority
+            unoptimized
           />
         </div>
 
