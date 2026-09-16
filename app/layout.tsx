@@ -1,5 +1,22 @@
 import type { Metadata } from "next";
+import { Inter, Instrument_Serif, Caveat } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const instrumentSerif = Instrument_Serif({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-serif",
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-script",
+});
 
 export const metadata: Metadata = {
   title: "Izanagi Labs",
@@ -16,10 +33,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} ${caveat.variable}`}>
+      <body className="font-sans bg-[#F4F5F0] text-[#1A1A1A] antialiased">
+        {children}
+      </body>
     </html>
   );
 }
