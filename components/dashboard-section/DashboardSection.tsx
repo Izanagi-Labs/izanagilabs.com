@@ -1,0 +1,25 @@
+import { SectionCopy } from "./SectionCopy"
+import { DashboardDemo } from "./DashboardDemo"
+
+export function DashboardSection() {
+  return (
+    <section className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">
+      <div className="flex flex-col xl:flex-row gap-12 xl:gap-20 items-start relative z-10">
+        <div className="w-full xl:w-[30%] shrink-0 sticky top-24">
+          <SectionCopy />
+        </div>
+        <div className="w-full xl:w-[70%] min-w-0">
+          <DashboardDemo />
+        </div>
+      </div>
+      
+      {/* Outer Annotations */}
+      <div className="hidden xl:block absolute bottom-12 left-8 text-system-xs text-foreground-fainter tracking-[0.2em] font-mono">
+        —— FROM DATA TO DIRECTION.
+      </div>
+      <div className="hidden xl:block absolute bottom-12 right-8 text-system-xs text-foreground-fainter tracking-[0.2em] font-mono">
+        PEOPLE • TECHNOLOGY • A BRIGHTER TOMORROW
+      </div>
+    </section>
+  )
+}

@@ -1,38 +1,82 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 export function HeroCopy() {
   return (
     <section className="flex flex-col justify-center max-w-[600px] lg:max-w-[500px] w-full pt-8 lg:pt-16 h-full">
-      <p className="font-sans text-[11px] lg:text-[13px] tracking-[0.2em] uppercase text-[#808080] mb-6 lg:mb-8">
+      <motion.p 
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.1 }}
+        className="text-system-sm text-foreground-faint mb-6 lg:mb-8"
+      >
         Custom solutions, clear systems
-      </p>
-      <h1 className="font-serif text-5xl md:text-6xl lg:text-[72px] leading-[1.05] text-[#111111] mb-6">
-        We build custom solutions for your problems.
-      </h1>
-      <p className="font-sans text-lg lg:text-[22px] text-[#4A4A4A] tracking-wider mb-8 lg:mb-12">
+      </motion.p>
+      
+      <motion.h1 
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.15 }}
+        className="text-display-xl text-foreground mb-6"
+      >
+        We build custom <span className="italic">solutions for your problems.</span>
+      </motion.h1>
+      
+      <motion.p 
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.25 }}
+        className="text-system-lg text-foreground-muted mb-8 lg:mb-12"
+      >
         Web &middot; Mobile &middot; Software &middot; AI
-      </p>
+      </motion.p>
       
-      <div>
-        <Link href="#" className="inline-flex items-center justify-center gap-4 bg-brand-rust text-white px-8 py-4 lg:py-[18px] font-sans text-base lg:text-[17px] hover:bg-opacity-90 transition-opacity">
-          Tell us your problem <ArrowRight size={20} strokeWidth={2} />
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.3 }}
+      >
+        <Link 
+          href="#contact" 
+          onClick={(e) => {
+            const target = document.querySelector('#contact');
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          className="group inline-flex items-center justify-center gap-4 bg-accent text-white px-8 py-4 lg:py-[18px] text-body-lg hover:bg-accent-hover transition-colors duration-200"
+        >
+          Tell us your problem 
+          <ArrowRight 
+            size={20} 
+            strokeWidth={2} 
+            className="transition-transform duration-200 group-hover:translate-x-1"
+          />
         </Link>
-      </div>
+      </motion.div>
       
-      <div className="mt-12 lg:mt-auto lg:pt-24 pb-8 flex flex-col gap-1">
+      <motion.div 
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.35 }}
+        className="mt-12 lg:mt-auto lg:pt-24 pb-8 flex flex-col gap-1"
+      >
         <div className="flex gap-4">
-           <div className="w-8 h-[1px] bg-[#CCCCCC] mt-2" />
+           <div className="w-8 h-[1px] bg-border mt-2" />
            <div>
-             <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-[#999999]">
+             <p className="font-mono text-micro text-foreground-fainter">
                Ideas to systems.
              </p>
-             <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-[#999999]">
+             <p className="font-mono text-micro text-foreground-fainter">
                Built to last.
              </p>
            </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

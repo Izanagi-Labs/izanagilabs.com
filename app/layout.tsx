@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Serif, Caveat } from "next/font/google";
+import { Inter, Instrument_Serif, Caveat, Space_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,15 +7,22 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
+const spaceMono = Space_Mono({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
+
 const instrumentSerif = Instrument_Serif({
-  weight: "400",
+  weight: ["400"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-serif",
 });
 
 const caveat = Caveat({
   subsets: ["latin"],
-  variable: "--font-script",
+  variable: "--font-annotation",
 });
 
 export const metadata: Metadata = {
@@ -35,8 +42,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} ${caveat.variable}`}>
-      <body className="font-sans bg-[#F4F5F0] text-[#1A1A1A] antialiased">
+    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} ${caveat.variable} ${spaceMono.variable}`}>
+      <body className="font-sans bg-background text-foreground antialiased">
         {children}
       </body>
     </html>

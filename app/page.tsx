@@ -1,5 +1,11 @@
-import { Hero } from "@/components/hero/Hero";
+import { Hero } from "@/components/hero/Hero"
+import { DashboardSection } from "@/components/dashboard-section/DashboardSection"
 
 export default function Home() {
-  return <Hero />;
+  return (
+    <main>
+      <Hero />
+      <DashboardSection />
+    </main>
+  )
 }
