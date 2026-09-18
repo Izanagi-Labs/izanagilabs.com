@@ -53,7 +53,7 @@ export function DashboardDemo() {
         <span>...a clearer view of what's next.</span>
       </div>
 
-      <BusinessSoftwareShell activeTab="overview">
+      <BusinessSoftwareShell activeTab="overview" flexibleHeight>
         <DashboardHeader dateRange={dateRange} setDateRange={setDateRange} />
         
 

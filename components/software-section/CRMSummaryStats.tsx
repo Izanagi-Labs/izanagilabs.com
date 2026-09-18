@@ -1,0 +1,29 @@
+import { Users, Clock, FileText, CheckCircle2 } from "lucide-react"
+
+export function CRMSummaryStats() {
+  const stats = [
+    { label: "New Enquiries", value: "24", icon: Users, color: "text-accent", bg: "bg-accent-soft" },
+    { label: "Follow-ups", value: "8", icon: Clock, color: "text-accent", bg: "bg-accent-soft" },
+    { label: "Quotations", value: "11", icon: FileText, color: "text-accent", bg: "bg-accent-soft" },
+    { label: "Confirmed", value: "6", icon: CheckCircle2, color: "text-success", bg: "bg-success/10" },
+  ]
+
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-3">
+      {stats.map((stat) => {
+        const Icon = stat.icon
+        return (
+          <div key={stat.label} className="bg-surface-raised border border-border rounded-lg p-2.5 flex flex-col justify-between shadow-sm group hover:border-border-subtle transition-colors">
+            <div className="flex justify-between items-start mb-1.5">
+              <span className="text-[11px] font-medium text-foreground-muted">{stat.label}</span>
+              <div className={`w-6 h-6 rounded flex items-center justify-center ${stat.bg}`}>
+                <Icon className={`w-3.5 h-3.5 ${stat.color}`} />
+              </div>
+            </div>
+            <span className="text-base font-semibold text-foreground tracking-tight">{stat.value}</span>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
