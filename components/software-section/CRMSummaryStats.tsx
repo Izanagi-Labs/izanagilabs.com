@@ -1,11 +1,18 @@
 import { Users, Clock, FileText, CheckCircle2 } from "lucide-react"
+import { DateRange } from "../dashboard-section/data"
 
-export function CRMSummaryStats() {
+interface CRMSummaryStatsProps {
+  dateRange?: DateRange
+}
+
+export function CRMSummaryStats({ dateRange = "30d" }: CRMSummaryStatsProps) {
+  const multiplier = dateRange === "7d" ? 0.3 : dateRange === "90d" ? 2.8 : 1
+  
   const stats = [
-    { label: "New Enquiries", value: "24", icon: Users, color: "text-accent", bg: "bg-accent-soft" },
-    { label: "Follow-ups", value: "8", icon: Clock, color: "text-accent", bg: "bg-accent-soft" },
-    { label: "Quotations", value: "11", icon: FileText, color: "text-accent", bg: "bg-accent-soft" },
-    { label: "Confirmed", value: "6", icon: CheckCircle2, color: "text-success", bg: "bg-success/10" },
+    { label: "New Enquiries", value: Math.round(24 * multiplier).toString(), icon: Users, color: "text-accent", bg: "bg-accent-soft" },
+    { label: "Follow-ups", value: Math.round(8 * multiplier).toString(), icon: Clock, color: "text-accent", bg: "bg-accent-soft" },
+    { label: "Quotations", value: Math.round(11 * multiplier).toString(), icon: FileText, color: "text-accent", bg: "bg-accent-soft" },
+    { label: "Confirmed", value: Math.round(6 * multiplier).toString(), icon: CheckCircle2, color: "text-success", bg: "bg-success/10" },
   ]
 
   return (

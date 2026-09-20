@@ -28,9 +28,13 @@ export default function RevenueChart({ data }: RevenueChartProps) {
             axisLine={false} 
             tickLine={false} 
             tick={{ fill: "var(--color-foreground-faint)", fontSize: 10 }} 
-            domain={[0, 2000000]}
-            ticks={[0, 1000000, 2000000]}
-            tickFormatter={(value) => value === 0 ? "0" : `${value / 100000}L`}
+            tickFormatter={(value) => {
+              if (value === 0) return "0";
+              if (value >= 100000) return `${(value / 100000).toFixed(1).replace('.0', '')}L`;
+              if (value >= 1000) return `${(value / 1000).toFixed(1).replace('.0', '')}k`;
+              return value;
+            }}
+            width={35}
           />
           <Tooltip 
             contentStyle={{ 

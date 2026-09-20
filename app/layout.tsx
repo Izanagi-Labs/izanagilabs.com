@@ -22,7 +22,7 @@ const instrumentSerif = Instrument_Serif({
 
 const caveat = Caveat({
   subsets: ["latin"],
-  variable: "--font-annotation",
+  variable: "--font-caveat",
 });
 
 export const metadata: Metadata = {

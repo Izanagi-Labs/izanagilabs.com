@@ -1,0 +1,47 @@
+import Image from "next/image"
+import { Search, Bell, User } from "lucide-react"
+
+export function MarketingToolbar() {
+  return (
+    <div className="flex items-center justify-between w-full h-[52px] px-4 sm:px-6 border-b border-border/60 bg-surface-raised shrink-0">
+      
+      {/* Left: Branding */}
+      <div className="flex items-center gap-2 lg:gap-3 shrink-0">
+        <div className="relative w-[22px] h-[22px]">
+          <Image src="/logo.png" alt="Izanagi" fill className="object-contain" />
+        </div>
+        <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-foreground hidden sm:block mt-0.5">
+          IZANAGI
+        </span>
+      </div>
+      
+      {/* Center: Search Visual */}
+      <div className="flex-1 hidden sm:flex justify-end lg:justify-center mx-4 lg:mx-8 min-w-0">
+        <div className="flex items-center gap-2.5 h-8 px-3 rounded-md border border-border bg-background/50 max-w-[320px] w-full min-w-0 shrink text-foreground-faint transition-colors hover:bg-background">
+          <Search className="w-3.5 h-3.5 shrink-0 opacity-70" />
+          <span className="text-xs truncate mt-0.5">Search campaigns, keywords or audiences...</span>
+        </div>
+      </div>
+      
+      {/* Right: Utilities */}
+      <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+        
+        {/* Date Range Visual */}
+        <div className="flex items-center gap-1.5 h-8 px-2 sm:px-3 rounded-md border border-border bg-surface text-xs font-medium text-foreground-muted cursor-default hover:text-foreground transition-colors shrink-0 ml-auto sm:ml-0">
+          <span className="mt-0.5">Last 30 days</span>
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1 opacity-60">
+            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+        
+        <button className="flex items-center justify-center w-8 h-8 rounded-full hover:bg-border-subtle transition-colors text-foreground-muted">
+          <Bell className="w-[15px] h-[15px]" />
+        </button>
+        
+        <button className="flex items-center justify-center w-7 h-7 rounded-full bg-border-subtle/50 border border-border/80 text-foreground hover:bg-border-subtle transition-colors ml-1">
+          <User className="w-3.5 h-3.5" />
+        </button>
+      </div>
+    </div>
+  )
+}

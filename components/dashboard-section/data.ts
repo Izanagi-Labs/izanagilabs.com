@@ -30,33 +30,49 @@ export const getRevenueData = (range: DateRange) => {
       return [
         { date: "Mon", revenue: 45000 },
         { date: "Tue", revenue: 52000 },
-        { date: "Wed", revenue: 48000 },
-        { date: "Thu", revenue: 61000 },
-        { date: "Fri", revenue: 75000 },
-        { date: "Sat", revenue: 68000 },
-        { date: "Sun", revenue: 82000 },
+        { date: "Wed", revenue: 41000 },
+        { date: "Thu", revenue: 68000 },
+        { date: "Fri", revenue: 59000 },
+        { date: "Sat", revenue: 84000 },
+        { date: "Sun", revenue: 76000 },
       ]
     case "90d":
       return [
-        { date: "Jan", revenue: 1100000 },
-        { date: "Feb", revenue: 1450000 },
-        { date: "Mar", revenue: 2030000 },
+        { date: "Week 1", revenue: 220000 },
+        { date: "Week 2", revenue: 190000 },
+        { date: "Week 3", revenue: 260000 },
+        { date: "Week 4", revenue: 310000 },
+        { date: "Week 5", revenue: 280000 },
+        { date: "Week 6", revenue: 350000 },
+        { date: "Week 7", revenue: 320000 },
+        { date: "Week 8", revenue: 420000 },
+        { date: "Week 9", revenue: 390000 },
+        { date: "Week 10", revenue: 480000 },
+        { date: "Week 11", revenue: 450000 },
+        { date: "Week 12", revenue: 550000 },
       ]
     case "30d":
     default:
       return [
-        { date: "W1", revenue: 220000 },
-        { date: "W2", revenue: 280000 },
-        { date: "W3", revenue: 310000 },
-        { date: "W4", revenue: 430000 },
+        { date: "01", revenue: 28000 },
+        { date: "04", revenue: 32000 },
+        { date: "07", revenue: 29000 },
+        { date: "10", revenue: 41000 },
+        { date: "13", revenue: 38000 },
+        { date: "16", revenue: 45000 },
+        { date: "19", revenue: 42000 },
+        { date: "22", revenue: 51000 },
+        { date: "25", revenue: 48000 },
+        { date: "28", revenue: 62000 },
+        { date: "30", revenue: 59000 },
       ]
   }
 }
 
 export const getOrderStatus = (range: DateRange) => {
   const mult = range === "7d" ? 1 : range === "30d" ? 4 : 12
-  const completedBase = range === "7d" ? 72 : range === "30d" ? 64 : 58
-  const processingBase = range === "7d" ? 18 : range === "30d" ? 21 : 28
+  const completedBase = range === "7d" ? 64 : range === "30d" ? 58 : 72
+  const processingBase = range === "7d" ? 22 : range === "30d" ? 26 : 18
   const pendingBase = 100 - completedBase - processingBase
 
   return [

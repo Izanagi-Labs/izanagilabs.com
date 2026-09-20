@@ -13,13 +13,6 @@ export function DashboardSection() {
         </div>
       </div>
       
-      {/* Outer Annotations */}
-      <div className="hidden xl:block absolute bottom-12 left-8 text-system-xs text-foreground-fainter tracking-[0.2em] font-mono">
-        —— FROM DATA TO DIRECTION.
-      </div>
-      <div className="hidden xl:block absolute bottom-12 right-8 text-system-xs text-foreground-fainter tracking-[0.2em] font-mono">
-        PEOPLE • TECHNOLOGY • A BRIGHTER TOMORROW
-      </div>
     </section>
   )
 }

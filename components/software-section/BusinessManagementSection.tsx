@@ -6,24 +6,30 @@ export function BusinessManagementSection() {
       <div className="flex flex-col-reverse xl:flex-row gap-12 xl:gap-20 items-start relative z-10">
         <div className="w-full xl:w-[68%] min-w-0 relative">
           {/* Annotation: From enquiry to payment... */}
-          <div className="hidden xl:block absolute -top-20 left-20 transform -rotate-6 z-20">
+          <div className="hidden xl:block absolute -top-20 left-20 transform -rotate-6 z-20 flex flex-col items-center">
             <span className="font-annotation text-foreground-faint text-xl relative z-10">From enquiry<br/>to payment...</span>
-            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" className="absolute top-14 left-10 text-foreground-faint -z-10">
-              <path d="M10 5 Q 30 5 45 35" stroke="currentColor" strokeWidth="1" fill="none" />
-              <path d="M35 33 L 45 35 L 41 22" stroke="currentColor" strokeWidth="1" fill="none" />
+            <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-12 left-16 text-foreground-fainter opacity-60 transform -scale-x-100">
+              <path d="M28 2C28 2 12 8 4 20C4 20 10 18 10 18M4 20C4 20 8 12 8 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
           <CRMDemo />
+          
+          {/* Annotation: ...keep your business moving forward. */}
+          <div className="hidden xl:block absolute -bottom-24 left-32 transform -rotate-3 z-20 flex items-center">
+            <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute -top-6 -left-4 text-foreground-fainter opacity-60 transform -scale-x-100">
+              <path d="M4 22C4 22 18 14 28 4C28 4 22 6 22 6M28 4C28 4 24 12 24 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <span className="font-annotation text-foreground-faint text-xl whitespace-nowrap ml-6">...keep your business<br/>moving forward.</span>
+          </div>
         </div>
         <div className="w-full xl:w-[32%] shrink-0 sticky top-24 pt-4 pb-10">
           <div className="flex flex-col gap-4 w-full relative h-full xl:pl-4">
             
             {/* Annotation: Less admin. More business. */}
-            <div className="hidden xl:block absolute -top-12 right-0 transform rotate-3">
+            <div className="hidden xl:block absolute -top-12 right-0 transform rotate-3 flex flex-col items-center">
               <span className="font-annotation text-foreground-faint text-xl">Less admin.<br/>More business.</span>
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" className="absolute top-4 -left-10 text-foreground-faint">
-                <path d="M50 10 Q 30 10 10 30" stroke="currentColor" strokeWidth="1" fill="none" />
-                <path d="M10 20 L 10 30 L 20 30" stroke="currentColor" strokeWidth="1" fill="none" />
+              <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-10 -left-6 text-foreground-fainter opacity-60">
+                <path d="M28 2C28 2 12 8 4 20C4 20 10 18 10 18M4 20C4 20 8 12 8 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
 
@@ -54,15 +60,6 @@ export function BusinessManagementSection() {
               <span className="hidden sm:block text-system-2xs text-foreground-fainter tracking-[0.2em] ml-auto mr-4">
                 FROM OPPORTUNITIES<br/>TO OUTCOMES.
               </span>
-            </div>
-            
-            {/* Annotation: ...keep your business moving forward. */}
-            <div className="hidden xl:block absolute -bottom-60 -left-140 transform -rotate-3">
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" className="absolute -top-12 left-0 text-foreground-faint">
-                <path d="M40 50 Q 20 50 10 10" stroke="currentColor" strokeWidth="1" fill="none" />
-                <path d="M10 20 L 10 10 L 20 10" stroke="currentColor" strokeWidth="1" fill="none" />
-              </svg>
-              <span className="font-annotation text-foreground-faint text-xl whitespace-nowrap ml-6">...keep your business<br/>moving forward.</span>
             </div>
           </div>
         </div>
