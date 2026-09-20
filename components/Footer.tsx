@@ -68,7 +68,7 @@ export function Footer() {
               </div>
               <nav className="flex flex-col gap-3">
                 <Link 
-                  href="/" 
+                  href="#home" 
                   className="text-[15px] text-[#F4F5F0]/90 hover:text-[#F4F5F0] transition-colors"
                 >
                   Home
