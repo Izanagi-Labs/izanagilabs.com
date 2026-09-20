@@ -22,10 +22,10 @@ export function MobileWebsiteMockup() {
       <div className="h-[28%] xl:h-[110px] w-full relative shrink-0 bg-[#f4f3f0]">
         <Image 
           src="/images/hero-arch.jpg"
-          alt="North House Architecture Mobile"
+          alt=""
           fill
           className="object-cover object-[center_65%]"
-          sizes="200px"
+          sizes="(max-width: 1280px) 100vw, 200px"
           priority
         />
       </div>
@@ -37,9 +37,9 @@ export function MobileWebsiteMockup() {
           ARCHITECTURE / INTERIORS
         </span>
         
-        <h1 className="font-serif text-[12px] md:text-[14px] xl:text-[18px] leading-[0.95] text-foreground tracking-tight mb-1 md:mb-2">
+        <div className="font-serif text-[12px] md:text-[14px] xl:text-[18px] leading-[0.95] text-foreground tracking-tight mb-1 md:mb-2">
           Spaces shaped<br/>around living.
-        </h1>
+        </div>
         
         <p className="hidden md:block text-[5.5px] leading-[1.45] text-foreground-muted max-w-[130px] mb-3">
           Thoughtful architecture and interior design<br/>for a more human way of living.
@@ -64,10 +64,10 @@ export function MobileWebsiteMockup() {
             <div className="h-[30px] md:h-[40px] xl:h-[50px] w-full rounded-[1px] mb-1 xl:mb-1.5 overflow-hidden relative">
               <Image 
                 src="/images/project-cove-house.jpg" 
-                alt="Cove House" 
+                alt="" 
                 fill 
                 className="object-cover object-[center_70%] transition-transform duration-700 group-hover:scale-105" 
-                sizes="150px" 
+                sizes="(max-width: 1280px) 100vw, 200px" 
               />
             </div>
             <div className="flex justify-between items-center mb-0.5">

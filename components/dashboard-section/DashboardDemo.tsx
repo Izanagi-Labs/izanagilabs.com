@@ -50,7 +50,7 @@ export function DashboardDemo() {
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-foreground-fainter opacity-60 ml-4">
           <path d="M4 36C4 36 20 34 30 20C30 20 22 20 22 20M30 20C30 20 30 28 30 28" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
         </svg>
-        <span className="font-annotation text-foreground-muted text-[22px] leading-tight block">...a clearer view of what's next.</span>
+        <span className="font-annotation text-foreground-muted text-[22px] leading-tight block">...a clearer view of what&apos;s next.</span>
       </div>
 
       <BusinessSoftwareShell activeTab="overview" flexibleHeight>

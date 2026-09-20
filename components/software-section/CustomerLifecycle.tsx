@@ -1,4 +1,4 @@
-import { Check } from "lucide-react"
+
 
 export type LifecycleStatus = 'completed' | 'pending' | 'not-started'
 

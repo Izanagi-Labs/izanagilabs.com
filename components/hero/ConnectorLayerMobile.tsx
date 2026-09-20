@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-export function ConnectorLayerMobile({ prefersReducedMotion = false }: { prefersReducedMotion?: boolean }) {
+export function ConnectorLayerMobile() {
   return (
     <svg className="absolute inset-0 w-full h-full pointer-events-none lg:hidden" style={{ zIndex: 0 }}>
       <defs>

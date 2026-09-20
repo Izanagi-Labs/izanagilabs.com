@@ -4,14 +4,14 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { motion } from "motion/react";
 
-export function HeroCopy() {
+export function HeroValueProposition() {
   return (
     <section className="flex flex-col justify-center max-w-[600px] lg:max-w-[500px] w-full pt-8 lg:pt-16 h-full">
       <motion.p 
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.1 }}
-        className="text-system-sm text-foreground-faint mb-6 lg:mb-8"
+        className="text-system-sm text-[#707070] mb-6 lg:mb-8"
       >
         Custom solutions, clear systems
       </motion.p>
@@ -68,10 +68,10 @@ export function HeroCopy() {
         <div className="flex gap-4">
            <div className="w-8 h-[1px] bg-border mt-2" />
            <div>
-             <p className="font-mono text-micro text-foreground-fainter">
+             <p className="font-mono text-micro text-[#707070]">
                Ideas to systems.
              </p>
-             <p className="font-mono text-micro text-foreground-fainter">
+             <p className="font-mono text-micro text-[#707070]">
                Built to last.
              </p>
            </div>

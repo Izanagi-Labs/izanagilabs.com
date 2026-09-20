@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -69,32 +67,20 @@ export function Footer() {
                 <span className="text-[10px] tracking-[0.2em] uppercase text-[#F4F5F0]/70">NAVIGATE</span>
               </div>
               <nav className="flex flex-col gap-3">
-                <a 
-                  href="#" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
+                <Link 
+                  href="/" 
                   className="text-[15px] text-[#F4F5F0]/90 hover:text-[#F4F5F0] transition-colors"
                 >
                   Home
-                </a>
+                </Link>
                 <a 
-                  href="#dashboard" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('dashboard')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
+                  href="#capabilities" 
                   className="text-[15px] text-[#F4F5F0]/90 hover:text-[#F4F5F0] transition-colors"
                 >
                   Services
                 </a>
                 <a 
                   href="#contact" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
                   className="text-[15px] text-[#F4F5F0]/90 hover:text-[#F4F5F0] transition-colors"
                 >
                   Contact
@@ -106,10 +92,25 @@ export function Footer() {
               <div className="pb-2 border-b border-[#F4F5F0]/10">
                 <span className="text-[10px] tracking-[0.2em] uppercase text-[#F4F5F0]/70">CONNECT</span>
               </div>
-              <nav className="flex flex-col gap-3">
-                <a href="https://www.linkedin.com/company/izanagi-labs" className="text-[15px] text-[#F4F5F0]/90 hover:text-[#F4F5F0] transition-colors">LinkedIn</a>
-                <a href="https://www.instagram.com/izanagilabs" className="text-[15px] text-[#F4F5F0]/90 hover:text-[#F4F5F0] transition-colors">Instagram</a>
-              </nav>
+             <nav className="flex flex-col gap-3" aria-label="Social links">
+  <a
+    href="https://www.linkedin.com/company/izanagi-labs"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-[15px] text-[#F4F5F0]/90 hover:text-[#F4F5F0] transition-colors"
+  >
+    LinkedIn
+  </a>
+
+  <a
+    href="https://www.instagram.com/izanagilabs"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-[15px] text-[#F4F5F0]/90 hover:text-[#F4F5F0] transition-colors"
+  >
+    Instagram
+  </a>
+</nav>
             </div>
           </div>
         </div>

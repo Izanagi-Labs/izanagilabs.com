@@ -1,16 +1,14 @@
 "use client"
 
 import { motion } from "motion/react"
-import { useEffect, useState } from "react"
+import { useSyncExternalStore } from "react"
+
+const emptySubscribe = () => () => {}
 
 export function ConnectorLayer() {
-  const [mounted, setMounted] = useState(false)
-  
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  const isClient = useSyncExternalStore(emptySubscribe, () => true, () => false)
 
-  if (!mounted) return null
+  if (!isClient) return null
 
   // 5 curves fanning from center-top (350,0) to each platform position
   const curves = [

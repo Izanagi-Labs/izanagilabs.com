@@ -8,10 +8,17 @@ import { ContactSection } from "@/components/contact-section/ContactSection"
 
 import { AISEOSection } from "@/components/ai-seo-section/AISEOSection"
 import { WebsiteDevelopmentSection } from "@/components/website-development-section/WebsiteDevelopmentSection"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+}
 
 export default function Home() {
   return (
-    <main>
+    <main id="main-content">
       <Hero />
       <DashboardSection />
       <BusinessManagementSection />

@@ -1,5 +1,3 @@
-"use client"
-
 import { Search, User } from "lucide-react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { DateRange } from "./data"

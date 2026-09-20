@@ -8,7 +8,7 @@ export function BusinessManagementSection() {
           {/* Annotation: From enquiry to payment... */}
           <div className="hidden xl:flex absolute -top-20 left-20 transform -rotate-6 z-20 flex-col items-center pointer-events-none" aria-hidden="true">
             <span className="font-annotation text-foreground-muted text-[22px] leading-tight relative z-10 block pr-8">From enquiry<br/>to payment...</span>
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-foreground-fainter opacity-60 mt-1 ml-16">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-[#707070]er opacity-60 mt-1 ml-16">
               <path d="M4 4C4 4 20 6 30 20C30 20 22 20 22 20M30 20C30 20 30 12 30 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
             </svg>
           </div>
@@ -16,7 +16,7 @@ export function BusinessManagementSection() {
           
           {/* Annotation: ...keep your business moving forward. */}
           <div className="hidden xl:flex absolute -bottom-24 left-32 transform -rotate-3 z-20 flex-col items-center pointer-events-none" aria-hidden="true">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-foreground-fainter opacity-60 mb-2 ml-16">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-[#707070]er opacity-60 mb-2 ml-16">
               <path d="M4 36C4 36 20 34 30 20C30 20 22 20 22 20M30 20C30 20 30 28 30 28" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
             </svg>
             <span className="font-annotation text-foreground-muted text-[22px] leading-tight relative z-10 block pl-8">...keep your business<br/>moving forward.</span>
@@ -28,13 +28,13 @@ export function BusinessManagementSection() {
             {/* Annotation: Less admin. More business. */}
             <div className="hidden xl:flex absolute -top-12 right-0 transform rotate-3 flex-col items-center pointer-events-none" aria-hidden="true">
               <span className="font-annotation text-foreground-muted text-[22px] leading-tight block text-right pl-12">Less admin.<br/>More business.</span>
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-foreground-fainter opacity-60 mt-1 mr-24">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-[#707070]er opacity-60 mt-1 mr-24">
                 <path d="M36 4C36 4 20 6 10 20C10 20 18 20 18 20M10 20C10 20 10 12 10 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
               </svg>
             </div>
 
             <div className="flex flex-col gap-2 relative z-10">
-              <span className="text-label text-foreground-faint">02 &mdash; BUSINESS MANAGEMENT SOFTWARE</span>
+              <span className="text-label text-[#707070]">02 &mdash; BUSINESS MANAGEMENT SOFTWARE</span>
               <h2 className="text-display-lg font-serif text-foreground leading-tight tracking-tight mt-4">
                 One system.<br/>Your entire business.
               </h2>
@@ -45,19 +45,19 @@ export function BusinessManagementSection() {
             </p>
             
             <div className="my-8 relative z-10">
-              <span className="text-system-xs text-foreground-faint tracking-widest leading-relaxed block">
+              <span className="text-system-xs text-[#707070] tracking-widest leading-relaxed block">
                 CRM &bull; ENQUIRIES &bull; QUOTATIONS &bull; JOBS &bull; BILLING
               </span>
             </div>
             
             <div className="relative z-10 flex items-center justify-between">
-              <a href="#" className="inline-flex items-center text-system-sm font-semibold text-accent hover:text-accent-hover transition-colors group tracking-widest uppercase">
+              <a href="#contact" className="inline-flex items-center text-system-sm font-semibold text-[#A94A29] hover:text-[#A94A29]-hover transition-colors group tracking-widest uppercase">
                 Explore possibilities 
                 <span className="ml-2">──&gt;</span>
               </a>
 
               {/* Annotation: FROM OPPORTUNITIES TO OUTCOMES. */}
-              <span className="hidden sm:block text-system-2xs text-foreground-fainter tracking-[0.2em] ml-auto mr-4">
+              <span className="hidden sm:block text-system-2xs text-[#707070]er tracking-[0.2em] ml-auto mr-4">
                 FROM OPPORTUNITIES<br/>TO OUTCOMES.
               </span>
             </div>

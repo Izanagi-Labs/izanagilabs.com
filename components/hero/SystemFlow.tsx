@@ -8,19 +8,22 @@ import { MicroLabels } from "./MicroLabels";
 import { ConnectorLayer } from "./ConnectorLayer";
 import { ConnectorLayerMobile } from "./ConnectorLayerMobile";
 import { motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+
+const getSnapshot = () => {
+  if (typeof window === "undefined") return false;
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+};
+const getServerSnapshot = () => false;
+const subscribe = (callback: () => void) => {
+  if (typeof window === "undefined") return () => {};
+  const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  mediaQuery.addEventListener("change", callback);
+  return () => mediaQuery.removeEventListener("change", callback);
+};
 
 export function SystemFlow() {
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setPrefersReducedMotion(mediaQuery.matches);
-    
-    const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
-    mediaQuery.addEventListener("change", handler);
-    return () => mediaQuery.removeEventListener("change", handler);
-  }, []);
+  const prefersReducedMotion = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   // Helper for conditional delays
   const d = (delay: number) => prefersReducedMotion ? 0 : delay;
@@ -39,7 +42,7 @@ export function SystemFlow() {
       <div className="hidden lg:block">
         <ConnectorLayer prefersReducedMotion={prefersReducedMotion} />
       </div>
-      <ConnectorLayerMobile prefersReducedMotion={prefersReducedMotion} />
+      <ConnectorLayerMobile />
       
       {/* Mobile Messy Inputs Wrapper */}
       <div className="relative w-full h-[220px] lg:contents">

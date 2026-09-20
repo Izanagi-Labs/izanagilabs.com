@@ -9,7 +9,7 @@ export function ConnectorLayer({ prefersReducedMotion = false }: { prefersReduce
     visible: { 
       pathLength: 1, 
       opacity: 1,
-      transition: { duration: dDur(0.6), delay: d(delay), ease: "easeInOut" as any }
+      transition: { duration: dDur(0.6), delay: d(delay), ease: "easeInOut" as const }
     }
   });
 

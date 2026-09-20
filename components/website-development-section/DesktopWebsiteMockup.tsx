@@ -29,9 +29,9 @@ export function DesktopWebsiteMockup() {
           <span className="text-[3.5px] md:text-[5px] xl:text-[6.5px] font-semibold tracking-[0.2em] text-foreground-muted uppercase mb-1.5 md:mb-3 xl:mb-4">
             ARCHITECTURE / INTERIORS
           </span>
-          <h1 className="font-serif text-[16px] md:text-[24px] xl:text-[36px] leading-[0.95] text-foreground tracking-tight mb-1.5 md:mb-3 xl:mb-4">
+          <div className="font-serif text-[16px] md:text-[24px] xl:text-[36px] leading-[0.95] text-foreground tracking-tight mb-1.5 md:mb-3 xl:mb-4">
             Spaces shaped<br/>around living.
-          </h1>
+          </div>
           <p className="hidden md:block text-[6.5px] xl:text-[9px] leading-[1.45] text-foreground-muted max-w-[200px] mb-3 xl:mb-6">
             Thoughtful architecture and interior design<br/>for a more human way of living.
           </p>
@@ -49,10 +49,10 @@ export function DesktopWebsiteMockup() {
         <div className="w-[57%] relative">
           <Image 
             src="/images/hero-arch.jpg"
-            alt="North House Architecture"
+            alt=""
             fill
             className="object-cover object-[center_30%] rounded-[1px]"
-            sizes="500px"
+            sizes="(max-width: 1280px) 60vw, 470px"
             priority
           />
         </div>
@@ -70,10 +70,10 @@ export function DesktopWebsiteMockup() {
             <div className="h-[35px] md:h-[65px] xl:h-[95px] w-full rounded-[1px] mb-1 md:mb-2 overflow-hidden relative">
               <Image 
                 src="/images/project-cove-house.jpg" 
-                alt="Cove House" 
+                alt="" 
                 fill 
                 className="object-cover object-[center_60%] transition-transform duration-700 group-hover:scale-105" 
-                sizes="300px" 
+                sizes="(max-width: 1280px) 33vw, 275px" 
               />
             </div>
             <div className="flex justify-between items-center mb-0.5">
@@ -90,10 +90,10 @@ export function DesktopWebsiteMockup() {
             <div className="h-[35px] md:h-[65px] xl:h-[95px] w-full rounded-[1px] mb-1 md:mb-2 overflow-hidden relative">
               <Image 
                 src="/images/project-marina-villa.jpg" 
-                alt="Marina Villa" 
+                alt="" 
                 fill 
                 className="object-cover object-[center_55%] transition-transform duration-700 group-hover:scale-105" 
-                sizes="300px" 
+                sizes="(max-width: 1280px) 33vw, 275px" 
               />
             </div>
             <div className="flex justify-between items-center mb-0.5">
@@ -110,10 +110,10 @@ export function DesktopWebsiteMockup() {
             <div className="h-[35px] md:h-[65px] xl:h-[95px] w-full rounded-[1px] mb-1 md:mb-2 overflow-hidden relative">
               <Image 
                 src="/images/project-hillside-retreat.jpg" 
-                alt="Hillside Retreat" 
+                alt="" 
                 fill 
                 className="object-cover object-[center_40%] transition-transform duration-700 group-hover:scale-105" 
-                sizes="300px" 
+                sizes="(max-width: 1280px) 33vw, 275px" 
               />
             </div>
             <div className="flex justify-between items-center mb-0.5">

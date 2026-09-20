@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Instrument_Serif, Caveat, Space_Mono } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
+import { MotionProvider } from "@/components/MotionProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,8 +28,33 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Izanagi Labs",
-  description: "Something exciting is brewing at Izanagi Labs.",
+  metadataBase: new URL("https://www.izanagilabs.com"),
+  title: {
+    default: "Izanagi Labs — Websites, Software & Digital Growth",
+    template: "%s | Izanagi Labs",
+  },
+  description: "Izanagi Labs designs and builds high-performance websites, custom software and digital growth systems for modern businesses.",
+  openGraph: {
+    type: "website",
+    siteName: "Izanagi Labs",
+    title: "Izanagi Labs — Websites, Software & Digital Growth",
+    description: "Izanagi Labs designs and builds high-performance websites, custom software and digital growth systems for modern businesses.",
+    url: "https://www.izanagilabs.com",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Izanagi Labs",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Izanagi Labs — Websites, Software & Digital Growth",
+    description: "Izanagi Labs designs and builds high-performance websites, custom software and digital growth systems for modern businesses.",
+    images: ["/og-image.png"],
+  },
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
@@ -44,9 +70,46 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} ${caveat.variable} ${spaceMono.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://www.izanagilabs.com/#organization",
+                  "name": "Izanagi Labs",
+                  "url": "https://www.izanagilabs.com",
+                  "email": "hello@izanagilabs.com",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.izanagilabs.com/logo.png"
+                  }
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://www.izanagilabs.com/#website",
+                  "url": "https://www.izanagilabs.com",
+                  "name": "Izanagi Labs",
+                  "publisher": {
+                    "@id": "https://www.izanagilabs.com/#organization"
+                  }
+                }
+              ]
+            })
+          }}
+        />
+      </head>
       <body className="font-sans bg-background text-foreground antialiased" suppressHydrationWarning>
-        {children}
-        <Footer />
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-background focus:text-foreground">
+          Skip to main content
+        </a>
+        <MotionProvider>
+          {children}
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   );

@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react"
 import { Monitor, Globe, Search, BarChart3 } from "lucide-react"
+import Image from "next/image"
 
 export function WebsitePreview() {
   return (
@@ -64,9 +65,9 @@ export function WebsitePreview() {
          {/* Website Hero */}
          <div className="flex flex-col sm:flex-row items-stretch bg-background/20 min-h-[200px]">
            <div className="px-6 py-8 flex flex-col justify-center flex-1">
-             <h1 className="text-xl sm:text-2xl font-serif leading-tight mb-3 text-foreground">
+             <div className="text-xl sm:text-2xl font-serif leading-tight mb-3 text-foreground">
                Modern software<br/>for growing businesses.
-             </h1>
+             </div>
              <p className="text-[10px] sm:text-[11px] text-foreground-muted max-w-[240px] mb-5 leading-relaxed">
                Custom software, web solutions and AI integration to help businesses move forward.
              </p>
@@ -76,14 +77,14 @@ export function WebsitePreview() {
              </div>
            </div>
            {/* Abstract Image Area */}
-           <div className="w-full sm:w-[50%] bg-border/40 relative overflow-hidden">
-             <img src="/images/hero-workflow.jpg" alt="Izanagi workflow miniature" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-90" />
+           <div className="w-full sm:w-[50%] bg-border/40 relative overflow-hidden min-h-[200px]">
+             <Image src="/images/hero-workflow.jpg" alt="" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover mix-blend-multiply opacity-90" />
            </div>
          </div>
 
          {/* Website Features (Solutions Grid) */}
          <div className="px-6 py-6 border-t border-border/50 bg-surface">
-           <h3 className="text-xs font-serif italic mb-3 text-foreground">Solutions for what&apos;s next.</h3>
+           <div className="text-xs font-serif italic mb-3 text-foreground">Solutions for what&apos;s next.</div>
            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {[
                 { title: "Custom Software", desc: "Development", icon: Monitor },

@@ -1,7 +1,14 @@
 import { MarketingToolbar } from "./MarketingToolbar"
 import { MarketingKPIs } from "./MarketingKPIs"
 import { CampaignTable } from "./CampaignTable"
-import { SpendRevenueChart } from "./SpendRevenueChart"
+import dynamic from "next/dynamic"
+
+const SpendRevenueChart = dynamic(
+  () => import("./SpendRevenueChart").then((mod) => mod.SpendRevenueChart),
+  { 
+    loading: () => <div className="w-full h-[240px] bg-background/50 rounded animate-pulse mt-4" />
+  }
+)
 import { Lightbulb, TrendingUp, TrendingDown } from "lucide-react"
 
 function OptimizationOpportunity() {

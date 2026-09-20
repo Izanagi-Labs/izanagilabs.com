@@ -12,9 +12,9 @@ export function AISEOSection() {
             <div className="flex flex-col gap-2 relative z-10">
               {/* Section label with long horizontal line separator */}
               <div className="flex items-center gap-4">
-                <span className="text-label text-foreground-faint whitespace-nowrap">05</span>
+                <span className="text-label text-[#707070] whitespace-nowrap">05</span>
                 <div className="w-10 h-px bg-foreground-faint" />
-                <span className="text-label text-foreground-faint whitespace-nowrap">AI SEO &amp; DISCOVERY</span>
+                <span className="text-label text-[#707070] whitespace-nowrap">AI SEO &amp; DISCOVERY</span>
               </div>
               <h2 className="text-display-lg font-serif text-foreground leading-tight tracking-tight mt-4">
                 Built to be<br/>discovered.
@@ -26,13 +26,13 @@ export function AISEOSection() {
             </p>
             
             <div className="my-8 relative z-10">
-              <span className="text-[9px] font-mono text-foreground-faint tracking-[0.15em] leading-relaxed block uppercase">
+              <span className="text-[9px] font-mono text-[#707070] tracking-[0.15em] leading-relaxed block uppercase">
                 Technical SEO &bull; Content &bull; Structured Data &bull; AI Discovery
               </span>
             </div>
             
             <div className="relative z-10 flex items-center justify-between">
-              <a href="#" className="inline-flex items-center text-system-sm font-semibold text-accent hover:text-accent-hover transition-colors group tracking-widest uppercase">
+              <a href="#contact" className="inline-flex items-center text-system-sm font-semibold text-[#A94A29] hover:text-[#A94A29]-hover transition-colors group tracking-widest uppercase">
                 Explore possibilities 
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">──&gt;</span>
               </a>
