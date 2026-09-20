@@ -16,13 +16,13 @@
   --color-foreground: #111111;
   --color-foreground-secondary: #333333;
   --color-foreground-muted: #4A4A4A;
-  --color-foreground-faint: #888888;
-  --color-foreground-fainter: #999999;
+  --color-foreground-faint: #757575;
+  --color-foreground-fainter: #707070;
   
   --color-border: #DDDDDD;
   --color-border-subtle: #EAEAEA;
 
-  --color-accent: #C25934;
+  --color-accent: #C05732;
   --color-accent-hover: #A94A29;
   --color-accent-soft: #FFEDE8;
 

@@ -9,7 +9,7 @@ export function JobOrderHeader() {
         <div className="flex flex-col gap-0.5">
           <div className="flex items-center gap-3">
             <h2 className="text-xl font-semibold text-foreground leading-tight tracking-tight">Job Order #JO-1048</h2>
-            <Badge variant="default" className="px-2 py-0.5 text-[10px] bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 shadow-none uppercase tracking-widest font-bold flex items-center gap-1.5 rounded-full">
+            <Badge variant="default" className="px-2 py-0.5 text-[10px] bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 shadow-none uppercase tracking-widest font-bold flex items-center gap-1.5 rounded-full">
               <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
               IN PRODUCTION
             </Badge>

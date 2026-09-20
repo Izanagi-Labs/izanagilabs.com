@@ -12,7 +12,7 @@ export function ProcessStages() {
           <Check className="w-2.5 h-2.5 stroke-[3]" />
         </div>
       ),
-      content: <span className="text-[10px] text-emerald-600 font-semibold block uppercase tracking-widest mt-0.5">Available</span>
+      content: <span className="text-[10px] text-emerald-700 font-semibold block uppercase tracking-widest mt-0.5">Available</span>
     },
     {
       id: "planning",
@@ -23,7 +23,7 @@ export function ProcessStages() {
           <Check className="w-2.5 h-2.5 stroke-[3]" />
         </div>
       ),
-      content: <span className="text-[10px] text-emerald-600 font-semibold block uppercase tracking-widest mt-0.5">Planned</span>
+      content: <span className="text-[10px] text-emerald-700 font-semibold block uppercase tracking-widest mt-0.5">Planned</span>
     },
     {
       id: "production",

@@ -48,7 +48,7 @@ export function KpiGrid({ data }: KpiGridProps) {
               <span className="text-heading-md font-semibold text-foreground tracking-tight">{item.value}</span>
               <div className={cn(
                 "text-[10px] font-medium flex items-center gap-1 mt-0.5",
-                item.positive ? "text-emerald-600" : "text-accent"
+                item.positive ? "text-emerald-700" : "text-accent"
               )}>
                 {item.change}
               </div>

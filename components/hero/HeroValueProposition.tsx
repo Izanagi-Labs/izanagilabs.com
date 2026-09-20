@@ -17,8 +17,8 @@ export function HeroValueProposition() {
       </motion.p>
       
       <motion.h1 
-        initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ y: 8 }}
+        animate={{ y: 0 }}
         transition={{ duration: 0.4, delay: 0.15 }}
         className="text-display-xl text-foreground mb-6"
       >

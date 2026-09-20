@@ -19,7 +19,7 @@ export function DashboardHeader({ dateRange, setDateRange, searchPlaceholder = "
       
       <div className="flex items-center justify-between md:justify-end gap-3 w-full md:w-auto">
         <Select value={dateRange} onValueChange={(val) => setDateRange?.(val as DateRange)}>
-          <SelectTrigger className="w-[120px] h-7 bg-surface-raised text-xs font-medium border-border shadow-sm">
+          <SelectTrigger aria-label="Select date range" className="w-[120px] h-7 bg-surface-raised text-xs font-medium border-border shadow-sm">
             <SelectValue placeholder="Select range" />
           </SelectTrigger>
           <SelectContent>

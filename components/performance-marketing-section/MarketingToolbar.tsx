@@ -34,13 +34,13 @@ export function MarketingToolbar() {
           </svg>
         </div>
         
-        <button className="flex items-center justify-center w-8 h-8 rounded-full hover:bg-border-subtle transition-colors text-foreground-muted">
+        <div aria-hidden="true" className="flex items-center justify-center w-8 h-8 rounded-full hover:bg-border-subtle transition-colors text-foreground-muted">
           <Bell className="w-[15px] h-[15px]" />
-        </button>
+        </div>
         
-        <button className="flex items-center justify-center w-7 h-7 rounded-full bg-border-subtle/50 border border-border/80 text-foreground hover:bg-border-subtle transition-colors ml-1">
+        <div aria-hidden="true" className="flex items-center justify-center w-7 h-7 rounded-full bg-border-subtle/50 border border-border/80 text-foreground hover:bg-border-subtle transition-colors ml-1">
           <User className="w-3.5 h-3.5" />
-        </button>
+        </div>
       </div>
     </div>
   )

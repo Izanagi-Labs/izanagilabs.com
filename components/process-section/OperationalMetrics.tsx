@@ -24,7 +24,7 @@ export function TodayMetrics({ dateRange = "30d" }: MetricProps) {
         <div className="bg-white border border-border/50 rounded-lg p-3 flex flex-col justify-between">
           <div className="flex items-center justify-between mb-2">  
             <span className="text-xs font-medium text-foreground-muted">Produced</span>
-            <div className="w-6 h-6 rounded-md bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+            <div className="w-6 h-6 rounded-md bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
               <Settings className="w-3.5 h-3.5" />
             </div>
           </div>
@@ -33,7 +33,7 @@ export function TodayMetrics({ dateRange = "30d" }: MetricProps) {
         <div className="bg-white border border-border/50 rounded-lg p-3 flex flex-col justify-between">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-medium text-foreground-muted">Passed QC</span>
-            <div className="w-6 h-6 rounded-md bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+            <div className="w-6 h-6 rounded-md bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
               <CheckCircle2 className="w-3.5 h-3.5" />
             </div>
           </div>
@@ -64,13 +64,13 @@ export function InventoryMetrics({ dateRange = "30d" }: MetricProps) {
           <Package className="w-4 h-4 text-foreground shrink-0" />
           <span className="text-foreground-muted whitespace-nowrap font-medium">Raw Material A</span>
           <span className="font-medium text-foreground text-right whitespace-nowrap">{Math.round(640 * m)} units</span>
-          <span className="w-10 text-center text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1 py-0.5 rounded">OK</span>
+          <span className="w-10 text-center text-[10px] font-bold text-emerald-700 bg-emerald-50 px-1 py-0.5 rounded">OK</span>
         </div>
         <div className="grid grid-cols-[auto_1fr_auto_auto] gap-x-3 items-center text-xs">
           <Database className="w-4 h-4 text-foreground shrink-0" />
           <span className="text-foreground-muted whitespace-nowrap font-medium">Component B</span>
           <span className="font-medium text-foreground text-right whitespace-nowrap">{Math.round(520 * m)} units</span>
-          <span className="w-10 text-center text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1 py-0.5 rounded">OK</span>
+          <span className="w-10 text-center text-[10px] font-bold text-emerald-700 bg-emerald-50 px-1 py-0.5 rounded">OK</span>
         </div>
         <div className="grid grid-cols-[auto_1fr_auto_auto] gap-x-3 items-center text-xs">
           <Package className="w-4 h-4 text-foreground shrink-0" />
@@ -82,7 +82,7 @@ export function InventoryMetrics({ dateRange = "30d" }: MetricProps) {
           <Package className="w-4 h-4 text-foreground shrink-0" />
           <span className="text-foreground-muted whitespace-nowrap font-medium">Finished Goods</span>
           <span className="font-medium text-foreground text-right whitespace-nowrap">{Math.round(140 * m)} units</span>
-          <span className="w-10 text-center text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1 py-0.5 rounded">OK</span>
+          <span className="w-10 text-center text-[10px] font-bold text-emerald-700 bg-emerald-50 px-1 py-0.5 rounded">OK</span>
         </div>
       </div>
     </div>
