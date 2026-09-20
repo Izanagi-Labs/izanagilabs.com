@@ -39,7 +39,7 @@ export function DiscoveryVisual() {
        </div>
 
        {/* Annotation: ...make the web understand you. */}
-       <div className="hidden lg:flex relative mt-8 left-1/2 -translate-x-1/2 transform -rotate-2 z-20 flex-col items-center">
+       <div className="hidden lg:flex relative mt-8 left-13 -translate-x-1/2 transform -rotate-2 z-20 flex-col items-center">
          <span className="font-annotation text-foreground-muted text-[22px] leading-tight block">...make the web<br/>understand you.</span>
        </div>
 

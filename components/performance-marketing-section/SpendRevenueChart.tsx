@@ -3,11 +3,11 @@
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 
 const chartData = [
-  { date: "1 Sep", spend: 6, revenue: 10 },
-  { date: "8 Sep", spend: 8, revenue: 18 },
-  { date: "15 Sep", spend: 10, revenue: 23 },
-  { date: "22 Sep", spend: 13, revenue: 30 },
-  { date: "30 Sep", spend: 17, revenue: 39 },
+  { date: "1 Sep", spend: 6, conversions: 100 },
+  { date: "8 Sep", spend: 8, conversions: 180 },
+  { date: "15 Sep", spend: 10, conversions: 230 },
+  { date: "22 Sep", spend: 13, conversions: 300 },
+  { date: "30 Sep", spend: 17, conversions: 390 },
 ]
 
 export function SpendRevenueChart() {
@@ -15,7 +15,7 @@ export function SpendRevenueChart() {
     <div className="flex flex-col p-3 sm:p-4 border border-border rounded-xl bg-surface-raised shadow-sm flex-1 min-h-[140px] overflow-hidden">
       <div className="flex justify-between items-center mb-1">
         <span className="text-[10px] uppercase tracking-widest text-foreground-faint font-semibold font-mono">
-          SPEND VS REVENUE
+          SPEND VS CONVERSIONS
         </span>
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5">
@@ -24,7 +24,7 @@ export function SpendRevenueChart() {
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
-            <span className="text-[9px] uppercase tracking-wider font-semibold text-foreground-faint">Revenue</span>
+            <span className="text-[9px] uppercase tracking-wider font-semibold text-foreground-faint">Conversions</span>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@ export function SpendRevenueChart() {
             />
             <Area 
               type="monotone" 
-              dataKey="revenue" 
+              dataKey="conversions" 
               stroke="var(--color-accent)" 
               strokeWidth={1.5}
               fillOpacity={1} 

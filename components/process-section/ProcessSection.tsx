@@ -4,20 +4,20 @@ import { ProcessDemo } from "./ProcessDemo"
 export function ProcessSection() {
   return (
     <section className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">
-      <div className="flex flex-col xl:flex-row gap-12 xl:gap-20 items-start relative z-10">
+      <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-24 items-center relative z-10">
         
         {/* Marketing Content (Left) */}
-        <div className="w-full xl:w-[32%] shrink-0 sticky top-24 pt-4 pb-10">
+        <div className="w-full lg:w-[40%] xl:w-[35%] shrink-0 flex flex-col justify-center">
           
           {/* Annotation: From planning... */}
-          <div className="hidden xl:block absolute -top-16 right-16 transform -rotate-6 z-20 flex items-center">
-            <span className="font-annotation text-foreground-faint text-xl relative z-10 block text-right mr-4">From planning<br/>to dispatch...</span>
-            <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-10 -right-6 text-foreground-fainter opacity-60">
-              <path d="M4 22C4 22 18 14 28 4C28 4 22 6 22 6M28 4C28 4 24 12 24 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <div className="hidden xl:flex absolute -top-16 right-16 transform -rotate-6 z-20 flex-col items-center pointer-events-none" aria-hidden="true">
+            <span className="font-annotation text-foreground-muted text-[22px] leading-tight relative z-10 block pr-8">From planning<br/>to dispatch...</span>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-foreground-fainter opacity-60 mt-1 ml-16">
+              <path d="M4 4C4 4 20 6 30 20C30 20 22 20 22 20M30 20C30 20 30 12 30 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
             </svg>
           </div>
 
-          <div className="flex flex-col gap-4 w-full relative h-full xl:pr-4">
+          <div className="flex flex-col gap-4 w-full relative max-w-[480px] lg:pr-4 xl:pr-8">
             <div className="flex flex-col gap-2 relative z-10">
               <span className="text-label text-foreground-faint">03 &mdash; PROCESS & PRODUCTION MANAGEMENT</span>
               <h2 className="text-display-lg font-serif text-foreground leading-tight tracking-tight mt-4">
@@ -45,23 +45,23 @@ export function ProcessSection() {
         </div>
 
         {/* Software UI (Right) */}
-        <div className="w-full xl:w-[68%] min-w-0 relative">
+        <div className="w-full lg:w-[60%] xl:w-[65%] min-w-0 relative">
           {/* Annotation: Less delay... */}
-          <div className="hidden xl:block absolute -top-16 right-20 transform -rotate-3 z-20 flex flex-col items-center">
-            <span className="font-annotation text-foreground-faint text-xl relative z-10 text-right block">Less delay.<br/>More control.</span>
-            <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-12 -left-6 text-foreground-fainter opacity-60">
-              <path d="M28 2C28 2 12 8 4 20C4 20 10 18 10 18M4 20C4 20 8 12 8 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <div className="hidden xl:flex absolute -top-16 right-20 transform -rotate-3 z-20 flex-col items-center pointer-events-none" aria-hidden="true">
+            <span className="font-annotation text-foreground-muted text-[22px] leading-tight relative z-10 text-right block pl-12">Less delay.<br/>More control.</span>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-foreground-fainter opacity-60 mt-1 mr-24">
+              <path d="M36 4C36 4 20 6 10 20C10 20 18 20 18 20M10 20C10 20 10 12 10 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
             </svg>
           </div>
           
           <ProcessDemo />
           
           {/* Annotation: Keep production moving. */}
-          <div className="hidden xl:block absolute -bottom-25 left-1/2 transform -translate-x-1/2 -rotate-3 z-20 flex flex-col items-center">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute -top-6 left-12 text-foreground-fainter opacity-60 transform -scale-y-100">
-              <path d="M12 2C12 2 12 18 12 18C12 18 8 14 8 14M12 18C12 18 16 14 16 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <div className="hidden xl:flex absolute -bottom-25 left-1/2 transform -translate-x-1/2 -rotate-3 z-20 flex-col items-center pointer-events-none" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-foreground-fainter opacity-60 mb-1">
+              <path d="M 20 36 C 20 36 20 4 20 4 C 20 4 12 12 12 12 M 20 4 C 20 4 28 12 28 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
             </svg>
-            <span className="font-annotation text-foreground-faint text-xl relative z-10 block mt-2">Keep production<br/>moving.</span>
+            <span className="font-annotation text-foreground-muted text-[22px] leading-tight relative z-10 block mt-2">Keep production<br/>moving.</span>
           </div>
         </div>
         

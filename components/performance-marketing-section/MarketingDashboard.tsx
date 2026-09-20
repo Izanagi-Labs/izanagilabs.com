@@ -69,7 +69,7 @@ export function MarketingDashboard() {
               
               <div className="flex border border-border rounded-xl bg-surface-raised shadow-sm shrink-0 p-2.5 sm:p-3">
                 <div className="flex-1 flex justify-between items-center px-1 sm:px-2 gap-2">
-                  <span className="text-xs sm:text-[13px] font-semibold text-foreground truncate">Revenue</span>
+                  <span className="text-xs sm:text-[13px] font-semibold text-foreground truncate">Conversions</span>
                   <span className="flex items-center gap-1 text-[11px] sm:text-xs font-semibold text-emerald-600 whitespace-nowrap">
                     <TrendingUp className="w-3.5 h-3.5" /> 32%
                   </span>

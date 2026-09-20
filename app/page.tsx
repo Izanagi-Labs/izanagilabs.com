@@ -3,6 +3,8 @@ import { DashboardSection } from "@/components/dashboard-section/DashboardSectio
 import { BusinessManagementSection } from "@/components/software-section/BusinessManagementSection"
 import { ProcessSection } from "@/components/process-section/ProcessSection"
 import { PerformanceMarketingSection } from "@/components/performance-marketing-section/PerformanceMarketingSection"
+import { WhyIzanagiSection } from "@/components/why-izanagi-section/WhyIzanagiSection"
+import { ContactSection } from "@/components/contact-section/ContactSection"
 
 import { AISEOSection } from "@/components/ai-seo-section/AISEOSection"
 import { WebsiteDevelopmentSection } from "@/components/website-development-section/WebsiteDevelopmentSection"
@@ -17,6 +19,8 @@ export default function Home() {
       <WebsiteDevelopmentSection />
       <AISEOSection />
       <PerformanceMarketingSection />
+      <WhyIzanagiSection />
+      <ContactSection />
     </main>
   )
 }

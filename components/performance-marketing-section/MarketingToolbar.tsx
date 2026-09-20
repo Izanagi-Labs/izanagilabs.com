@@ -7,8 +7,9 @@ export function MarketingToolbar() {
       
       {/* Left: Branding */}
       <div className="flex items-center gap-2 lg:gap-3 shrink-0">
-        <div className="relative w-[22px] h-[22px]">
-          <Image src="/logo.png" alt="Izanagi" fill className="object-contain" />
+        <div className="flex items-end h-4">
+          <div className="w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-b-[11px] border-b-foreground" />
+          <div className="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[16px] border-b-foreground -ml-1" />
         </div>
         <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-foreground hidden sm:block mt-0.5">
           IZANAGI

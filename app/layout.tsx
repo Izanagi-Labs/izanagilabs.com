@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Instrument_Serif, Caveat, Space_Mono } from "next/font/google";
 import "./globals.css";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} ${caveat.variable} ${spaceMono.variable}`}>
       <body className="font-sans bg-background text-foreground antialiased" suppressHydrationWarning>
         {children}
+        <Footer />
       </body>
     </html>
   );

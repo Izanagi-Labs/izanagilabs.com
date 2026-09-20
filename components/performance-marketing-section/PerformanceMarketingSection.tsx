@@ -3,7 +3,32 @@ import { MarketingDashboard } from "./MarketingDashboard";
 
 export function PerformanceMarketingSection() {
   return (
-    <section className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-25 relative">
+    <section className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">
+      
+      {/* Top Left Annotation */}
+      <div className="hidden xl:flex absolute top-12 left-[12%] transform -rotate-6 z-20 flex-col items-center pointer-events-none" aria-hidden="true">
+        <span className="font-annotation text-foreground-muted text-[22px] leading-tight relative z-10 block pr-8">From clicks<br/>to conversions...</span>
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-foreground-fainter opacity-60 mt-1 ml-16">
+          <path d="M4 4C4 4 20 6 30 20C30 20 22 20 22 20M30 20C30 20 30 12 30 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+        </svg>
+      </div>
+
+      {/* Top Right Annotation */}
+      <div className="hidden xl:flex absolute top-20 right-[8%] transform -rotate-3 z-20 flex-col items-center pointer-events-none" aria-hidden="true">
+        <span className="font-annotation text-foreground-muted text-[22px] leading-tight relative z-10 block text-right pl-12">Less guesswork.<br/>More growth.</span>
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-foreground-fainter opacity-60 mt-1 mr-24">
+          <path d="M36 4C36 4 20 6 10 20C10 20 18 20 18 20M10 20C10 20 10 12 10 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+        </svg>
+      </div>
+
+      {/* Bottom Center Annotation */}
+      <div className="hidden xl:flex absolute bottom-8 left-[35%] transform -rotate-3 z-20 flex-col items-center pointer-events-none" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-foreground-fainter opacity-60 mb-2 mr-16">
+          <path d="M4 36C4 36 20 34 30 20C30 20 22 20 22 20M30 20C30 20 30 28 30 28" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+        </svg>
+        <span className="font-annotation text-foreground-muted text-[22px] leading-tight relative z-10 block pr-8">...shift budget toward<br/>what performs.</span>
+      </div>
+
       {/* 
         flex-col lg:flex-row-reverse ensures the editorial content (first child in DOM) 
         appears on top on mobile (< 1024px) when stacked. 

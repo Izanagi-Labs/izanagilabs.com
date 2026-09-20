@@ -7,8 +7,8 @@ const metrics = [
     icon: Megaphone,
   },
   {
-    label: "Revenue",
-    value: "₹18.7L",
+    label: "Conversions",
+    value: "1,240",
     icon: BarChart3,
   },
   {

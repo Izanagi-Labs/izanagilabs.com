@@ -32,25 +32,25 @@ export function DashboardDemo() {
   return (
     <div className="relative">
       {/* Decorative Handwritten Annotations */}
-      <div className="absolute -top-12 left-1/3 -rotate-6 text-foreground-faint text-xl z-20 pointer-events-none hidden lg:flex flex-col items-center gap-1" style={{ fontFamily: 'var(--font-annotation)' }}>
-        <span>Turn data into decisions...</span>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-foreground-fainter opacity-60">
-          <path d="M12 2C12 2 12 18 12 18C12 18 8 14 8 14M12 18C12 18 16 14 16 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <div className="absolute -top-12 left-1/3 -rotate-6 z-20 pointer-events-none hidden lg:flex flex-col items-center gap-1">
+        <span className="font-annotation text-foreground-muted text-[22px] leading-tight block">Turn data into decisions...</span>
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-foreground-fainter opacity-60">
+          <path d="M 20 4 C 20 4 20 36 20 36 C 20 36 12 28 12 28 M 20 36 C 20 36 28 28 28 28" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
         </svg>
       </div>
       
-      <div className="absolute -top-10 -right-6 rotate-6 text-foreground-faint text-xl z-20 pointer-events-none hidden lg:flex flex-col items-end gap-1" style={{ fontFamily: 'var(--font-annotation)' }}>
-        <span>Real insights. Real progress.</span>
-        <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-foreground-fainter opacity-60 mr-4">
-          <path d="M28 2C28 2 12 8 4 20C4 20 10 18 10 18M4 20C4 20 8 12 8 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <div className="absolute -top-10 -right-6 rotate-6 z-20 pointer-events-none hidden lg:flex flex-col items-end gap-1">
+        <span className="font-annotation text-foreground-muted text-[22px] leading-tight block text-right">Real insights. Real progress.</span>
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-foreground-fainter opacity-60 mr-4">
+          <path d="M36 4C36 4 20 6 10 20C10 20 18 20 18 20M10 20C10 20 10 12 10 12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
         </svg>
       </div>
       
-      <div className="absolute -bottom-10 -left-8 -rotate-6 text-foreground-faint text-xl z-20 pointer-events-none hidden lg:flex flex-col items-start gap-1" style={{ fontFamily: 'var(--font-annotation)' }}>
-        <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-foreground-fainter opacity-60 ml-4">
-          <path d="M4 22C4 22 18 14 28 4C28 4 22 6 22 6M28 4C28 4 24 12 24 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <div className="absolute -bottom-10 -left-8 -rotate-6 z-20 pointer-events-none hidden lg:flex flex-col items-start gap-1">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-foreground-fainter opacity-60 ml-4">
+          <path d="M4 36C4 36 20 34 30 20C30 20 22 20 22 20M30 20C30 20 30 28 30 28" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
         </svg>
-        <span>...a clearer view of what's next.</span>
+        <span className="font-annotation text-foreground-muted text-[22px] leading-tight block">...a clearer view of what's next.</span>
       </div>
 
       <BusinessSoftwareShell activeTab="overview" flexibleHeight>

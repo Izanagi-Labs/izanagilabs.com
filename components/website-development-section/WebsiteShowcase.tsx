@@ -8,8 +8,8 @@ export function WebsiteShowcase() {
       <div className="relative w-full max-w-[820px] mx-auto flex items-center justify-center">
         
         {/* Annotation #1: Top Left */}
-        <div className="absolute -top-[50px] -left-[140px] transform -rotate-3 z-30 flex-col items-end pointer-events-none hidden xl:flex">
-          <span className="font-annotation text-foreground-muted text-[20px] leading-tight block text-right">
+        <div className="absolute -top-[100px] -left-[0px] transform -rotate-3 z-30 flex-col items-end pointer-events-none hidden xl:flex">
+          <span className="font-annotation text-foreground-muted text-[22px] leading-tight block text-right">
             From concept<br/>to something remarkable.
           </span>
           <svg width="45" height="45" viewBox="0 0 50 50" fill="none" className="text-foreground-fainter opacity-60 mt-1 mr-4">
@@ -19,7 +19,7 @@ export function WebsiteShowcase() {
 
         {/* Annotation #2: Upper Right */}
         <div className="absolute -top-[85px] right-[80px] transform rotate-3 z-30 flex-col items-center pointer-events-none hidden xl:flex">
-          <span className="font-annotation text-foreground-muted text-[20px] leading-tight block text-center">
+          <span className="font-annotation text-foreground-muted text-[22px] leading-tight block text-center">
             Designed around<br/>your brand.
           </span>
           <svg width="40" height="45" viewBox="0 0 50 50" fill="none" className="text-foreground-fainter opacity-60 mt-2 -ml-8">
@@ -32,7 +32,7 @@ export function WebsiteShowcase() {
           <svg width="35" height="40" viewBox="0 0 50 50" fill="none" className="text-foreground-fainter opacity-60 mb-2 ml-10">
             <path d="M 15 35 Q 25 15 40 10 M 32 10 L 40 10 L 40 18" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
           </svg>
-          <span className="font-annotation text-foreground-muted text-[19px] leading-tight block text-center">
+          <span className="font-annotation text-foreground-muted text-[22px] leading-tight block text-center">
             Fast by default.<br/>...not another template.
           </span>
         </div>
