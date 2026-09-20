@@ -14,7 +14,7 @@ export function Hero() {
         </div>
         
         {/* Right Column: Visual System */}
-        <div className="w-full lg:w-[55%] flex justify-center lg:justify-end">
+        <div className="w-full lg:w-[55%] min-w-0 flex justify-center lg:justify-end">
           <SystemFlow />
         </div>
       </main>

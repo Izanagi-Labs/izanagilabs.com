@@ -59,24 +59,6 @@ export function HeroValueProposition() {
         </Link>
       </motion.div>
       
-      <motion.div 
-        initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.35 }}
-        className="mt-12 lg:mt-auto lg:pt-24 pb-8 flex flex-col gap-1"
-      >
-        <div className="flex gap-4">
-           <div className="w-8 h-[1px] bg-border mt-2" />
-           <div>
-             <p className="font-mono text-micro text-[#707070]">
-               Ideas to systems.
-             </p>
-             <p className="font-mono text-micro text-[#707070]">
-               Built to last.
-             </p>
-           </div>
-        </div>
-      </motion.div>
     </section>
   );
 }

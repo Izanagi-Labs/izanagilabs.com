@@ -106,7 +106,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="font-sans bg-background text-foreground antialiased" suppressHydrationWarning>
+      <body className="font-sans bg-background text-foreground antialiased overflow-x-hidden" suppressHydrationWarning>
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-background focus:text-foreground">
           Skip to main content
         </a>
