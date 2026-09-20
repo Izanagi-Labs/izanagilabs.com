@@ -86,7 +86,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   "logo": {
                     "@type": "ImageObject",
                     "url": "https://www.izanagilabs.com/logo.png"
-                  }
+                  },
+                  "sameAs": [
+                    "https://www.linkedin.com/company/izanagi-labs",
+                    "https://www.instagram.com/izanagilabs"
+                  ]
                 },
                 {
                   "@type": "WebSite",
