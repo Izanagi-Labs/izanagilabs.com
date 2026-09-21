@@ -77,7 +77,7 @@ export function WebsitePreview() {
              </div>
            </div>
            {/* Abstract Image Area */}
-           <div className="w-full sm:w-[50%] bg-border/40 relative overflow-hidden min-h-[200px]">
+           <div className="hidden sm:block xs:block sm:w-[50%] bg-border/40 relative overflow-hidden min-h-[200px]">
              <Image src="/images/hero-workflow.jpg" alt="" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover mix-blend-multiply opacity-90" />
            </div>
          </div>

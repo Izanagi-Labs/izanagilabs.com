@@ -3,6 +3,7 @@ import { Inter, Instrument_Serif, Caveat, Space_Mono } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { MotionProvider } from "@/components/MotionProvider";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -107,6 +108,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="font-sans bg-background text-foreground antialiased overflow-x-hidden" suppressHydrationWarning>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1LL1Y52CLJ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-1LL1Y52CLJ');
+          `}
+        </Script>
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-background focus:text-foreground">
           Skip to main content
         </a>
