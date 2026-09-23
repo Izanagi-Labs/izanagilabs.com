@@ -1,4 +1,8 @@
+"use client"
+
 import { DateRange } from "../dashboard-section/data"
+import { AnimatedValue } from "../dashboard-section/AnimatedValue"
+import { motion, useReducedMotion } from "motion/react"
 
 interface ProductionProgressProps {
   dateRange?: DateRange
@@ -8,6 +12,7 @@ export function ProductionProgress({ dateRange = "30d" }: ProductionProgressProp
   const completed = dateRange === "7d" ? 120 : dateRange === "90d" ? 890 : 340
   const total = dateRange === "7d" ? 180 : dateRange === "90d" ? 1200 : 500
   const percent = Math.round((completed / total) * 100)
+  const reducedMotion = useReducedMotion()
 
   return (
     <div className="bg-surface-raised border border-border rounded-lg shadow-sm p-3 flex flex-col h-full justify-between">
@@ -16,14 +21,24 @@ export function ProductionProgress({ dateRange = "30d" }: ProductionProgressProp
         
         <div className="flex items-end justify-between mb-2">
           <div className="flex items-baseline gap-1.5">
-            <span className="text-2xl font-bold text-foreground leading-none">{completed}</span>
+            <span className="text-2xl font-bold text-foreground leading-none">
+              <AnimatedValue value={String(completed)} />
+            </span>
             <span className="text-xs text-foreground-muted font-medium">/ {total} units completed</span>
           </div>
-          <span className="text-lg font-bold text-accent leading-none">{percent}%</span>
+          <span className="text-lg font-bold text-accent leading-none">
+            <AnimatedValue value={String(percent)} />%
+          </span>
         </div>
         
         <div className="w-full h-3 bg-surface rounded-full overflow-hidden border border-border mt-3 mb-6">
-          <div className="h-full bg-accent rounded-full transition-all duration-1000" style={{ width: `${percent}%` }} />
+          <motion.div 
+            className="h-full bg-accent rounded-full" 
+            initial={reducedMotion ? { width: `${percent}%` } : { width: 0 }}
+            whileInView={{ width: `${percent}%` }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+          />
         </div>
 
         {/* Secondary Metrics */}

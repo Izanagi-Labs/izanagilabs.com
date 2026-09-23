@@ -13,7 +13,7 @@ import { Lightbulb, TrendingUp, TrendingDown } from "lucide-react"
 
 function OptimizationOpportunity() {
   return (
-    <div className="flex flex-col p-3 sm:p-4 border border-border rounded-xl bg-surface-raised shadow-sm">
+    <div className="flex flex-col p-3 sm:p-4 border border-border rounded-xl bg-surface-raised shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-border-subtle cursor-pointer group">
       <div className="flex items-center mb-2">
         <span className="text-[10px] uppercase tracking-widest text-foreground-faint font-semibold font-mono">
           OPTIMIZATION OPPORTUNITY
@@ -68,13 +68,13 @@ export function MarketingDashboard() {
             </div>
             
             {/* Right: Analytics Column (~35%) */}
-            <div className="w-full lg:flex-1 flex flex-col gap-2 sm:gap-3">
+            <div className="w-full lg:flex-1 flex flex-col gap-2 sm:gap-3 min-w-0">
               <OptimizationOpportunity />
               
               {/* Phase 5: Chart & Metrics */}
               <SpendRevenueChart />
               
-              <div className="flex border border-border rounded-xl bg-surface-raised shadow-sm shrink-0 p-2.5 sm:p-3">
+              <div className="flex border border-border rounded-xl bg-surface-raised shadow-sm shrink-0 p-2.5 sm:p-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-border-subtle cursor-pointer group">
                 <div className="flex-1 flex justify-between items-center px-1 sm:px-2 gap-2">
                   <span className="text-xs sm:text-[13px] font-semibold text-foreground truncate">Conversions</span>
                   <span className="flex items-center gap-1 text-[11px] sm:text-xs font-semibold text-emerald-700 whitespace-nowrap">

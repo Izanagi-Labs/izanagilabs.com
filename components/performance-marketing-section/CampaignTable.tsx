@@ -61,7 +61,7 @@ const campaigns = [
 
 export function CampaignTable() {
   return (
-    <div className="flex flex-col bg-surface-raised border border-border rounded-xl shadow-sm overflow-hidden h-full">
+    <div className="flex flex-col bg-surface-raised border border-border rounded-xl shadow-sm overflow-hidden h-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-border-subtle group">
       <div className="px-3 py-1.5 sm:py-2 border-b border-border bg-surface/50">
         <h4 className="text-body-sm font-semibold text-foreground">Campaigns</h4>
       </div>

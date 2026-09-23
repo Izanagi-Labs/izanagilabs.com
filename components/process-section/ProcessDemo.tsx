@@ -11,7 +11,7 @@ export function ProcessDemo() {
 
   return (
     <div className="relative">
-      <BusinessSoftwareShell activeTab="process" compactSidebar flexibleHeight={false}>
+      <BusinessSoftwareShell activeTab="process" compactSidebar flexibleHeight>
         <DashboardHeader 
           dateRange={dateRange}
           setDateRange={setDateRange}

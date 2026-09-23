@@ -1,6 +1,8 @@
 "use client"
 
+import { useRef } from "react"
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
+import { useInView, useReducedMotion } from "motion/react"
 
 const chartData = [
   { date: "1 Sep", spend: 6, conversions: 100 },
@@ -11,8 +13,12 @@ const chartData = [
 ]
 
 export function SpendRevenueChart() {
+  const containerRef = useRef(null)
+  const isInView = useInView(containerRef, { once: true, amount: 0.5 })
+  const reducedMotion = useReducedMotion()
+
   return (
-    <div className="flex flex-col p-3 sm:p-4 border border-border rounded-xl bg-surface-raised shadow-sm flex-1 min-h-[140px] overflow-hidden">
+    <div ref={containerRef} className="flex flex-col p-3 sm:p-4 border border-border rounded-xl bg-surface-raised shadow-sm flex-1 min-h-[140px] overflow-hidden transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-border-subtle cursor-pointer group">
       <div className="flex justify-between items-center mb-1">
         <span className="text-[10px] uppercase tracking-widest text-foreground-faint font-semibold font-mono">
           SPEND VS CONVERSIONS
@@ -31,7 +37,8 @@ export function SpendRevenueChart() {
       
       <div className="w-full h-[160px] lg:h-auto lg:flex-1 lg:min-h-0 mt-2">
         <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={chartData} margin={{ top: 5, right: 0, left: -25, bottom: 0 }}>
+          {isInView ? (
+            <AreaChart data={chartData} margin={{ top: 5, right: 0, left: -25, bottom: 0 }}>
             <defs>
               <linearGradient id="colorRevenuePerf" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="var(--color-accent)" stopOpacity={0.2} />
@@ -63,7 +70,9 @@ export function SpendRevenueChart() {
               strokeWidth={1.5}
               fillOpacity={1} 
               fill="url(#colorSpendPerf)" 
-              isAnimationActive={false}
+              isAnimationActive={!reducedMotion}
+              animationDuration={1200}
+              animationBegin={100}
             />
             <Area 
               type="monotone" 
@@ -72,9 +81,12 @@ export function SpendRevenueChart() {
               strokeWidth={1.5}
               fillOpacity={1} 
               fill="url(#colorRevenuePerf)" 
-              isAnimationActive={false}
+              isAnimationActive={!reducedMotion}
+              animationDuration={1200}
+              animationBegin={100}
             />
           </AreaChart>
+          ) : <div />}
         </ResponsiveContainer>
       </div>
     </div>

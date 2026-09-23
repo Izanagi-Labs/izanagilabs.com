@@ -97,11 +97,11 @@ export function CustomerWorkspace() {
     {/* Next Action Card */}
     <div className="flex flex-col">
       <span className="text-[10px] uppercase tracking-widest font-semibold text-foreground-faint mb-1.5">Next Action</span>
-      <div className="bg-surface-raised shadow-sm border border-border rounded-lg p-3 flex items-start gap-3 hover:border-border-subtle transition-colors cursor-pointer group">
+      <div className="bg-surface-raised shadow-sm border border-border rounded-lg p-3 flex items-start gap-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-border-subtle cursor-pointer group">
         <div className="w-8 h-8 rounded-md bg-accent-soft text-accent flex items-center justify-center shrink-0">
           <Clock className="w-4 h-4" />
         </div>
-        <div className="flex-1 min-w-0">
+        <div className="flex flex-col min-w-0 gap-1">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-foreground">Follow up with RK Industries</span>
             <ChevronRight className="w-3.5 h-3.5 text-foreground-faint group-hover:text-foreground transition-colors" />
@@ -128,7 +128,7 @@ export function CustomerWorkspace() {
     {/* Quotation Card */}
     <div className="flex flex-col mt-1">
       <span className="text-[10px] uppercase tracking-widest font-semibold text-foreground-faint mb-1.5">Quotation</span>
-      <div className="bg-surface-raised shadow-sm border border-border rounded-lg p-3 flex items-start gap-3 hover:border-border-subtle transition-colors cursor-pointer group">
+      <div className="bg-surface-raised shadow-sm border border-border rounded-lg p-3 flex items-start gap-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-border-subtle cursor-pointer group">
         <div className="w-8 h-8 rounded-md bg-surface border border-border flex items-center justify-center shrink-0 text-foreground-muted">
           <FileText className="w-4 h-4" />
         </div>
@@ -152,7 +152,7 @@ export function CustomerWorkspace() {
     {/* On Confirmation Flow */}
     <div className="flex flex-col mt-auto pt-2">
       <span className="text-[10px] uppercase tracking-widest font-semibold text-foreground-faint mb-1.5">On Confirmation</span>
-      <div className="bg-surface-raised shadow-sm border border-border rounded-lg p-3 flex items-center justify-between">
+      <div className="bg-surface-raised shadow-sm border border-border rounded-lg p-3 flex items-center justify-between transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-border-subtle cursor-pointer group">
         <div className="flex flex-col items-center gap-1">
           <div className="w-5 h-5 flex items-center justify-center text-foreground-muted">
             <FileText className="w-3.5 h-3.5" />

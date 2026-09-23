@@ -1,6 +1,7 @@
 import { BarChart2, ShoppingBag, Clock } from "lucide-react"
 import { Sparkline } from "./Sparkline"
 import { cn } from "@/lib/utils"
+import { AnimatedValue } from "./AnimatedValue"
 
 interface KpiData {
   label: string
@@ -45,7 +46,9 @@ export function KpiGrid({ data }: KpiGridProps) {
           
           <div className="flex items-end justify-between mt-1">
             <div>
-              <span className="text-heading-md font-semibold text-foreground tracking-tight">{item.value}</span>
+              <span className="text-heading-md font-semibold text-foreground tracking-tight">
+                <AnimatedValue value={item.value} />
+              </span>
               <div className={cn(
                 "text-[10px] font-medium flex items-center gap-1 mt-0.5",
                 item.positive ? "text-emerald-700" : "text-accent"

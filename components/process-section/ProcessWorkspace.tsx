@@ -20,7 +20,7 @@ export function ProcessWorkspace({ dateRange = "30d" }: ProcessWorkspaceProps) {
       </div>
 
       {/* Bottom Section: Cards Grid */}
-      <div className="flex-1 overflow-y-auto mt-3 px-1 pb-2">
+      <div className="flex-1 mt-3 px-1 pb-2">
         <div className="flex flex-col gap-3">
           {/* Row 1 */}
           <div className="flex flex-col lg:flex-row items-stretch gap-3">

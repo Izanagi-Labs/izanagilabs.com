@@ -1,6 +1,8 @@
 "use client"
 
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts"
+import { useInView, useReducedMotion } from "motion/react"
+import { useRef } from "react"
 
 interface OrderStatusProps {
   data: { name: string; value: number; fill: string }[]
@@ -9,8 +11,12 @@ interface OrderStatusProps {
 export default function OrderStatus({ data }: OrderStatusProps) {
   const total = data.reduce((sum, item) => sum + item.value, 0)
   
+  const ref = useRef<HTMLDivElement>(null)
+  const inView = useInView(ref, { once: true, amount: 0.5 })
+  const reducedMotion = useReducedMotion()
+
   return (
-    <div className="h-[140px] w-full flex items-center justify-between relative">
+    <div ref={ref} className="h-[140px] w-full flex items-center justify-between relative">
       <div className="w-[110px] h-[110px] relative shrink-0">
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-0">
           <span className="text-body-md font-semibold text-foreground">1,284</span>
@@ -18,6 +24,7 @@ export default function OrderStatus({ data }: OrderStatusProps) {
         </div>
         <div className="relative z-10 w-full h-full">
           <ResponsiveContainer width="100%" height="100%">
+            {inView ? (
             <PieChart>
               <Pie
                 data={data}
@@ -27,7 +34,9 @@ export default function OrderStatus({ data }: OrderStatusProps) {
                 outerRadius={55}
                 stroke="none"
                 dataKey="value"
-                isAnimationActive={false}
+                isAnimationActive={!reducedMotion}
+                animationDuration={800}
+                animationBegin={200}
               >
                 {data.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.fill} />
@@ -44,6 +53,7 @@ export default function OrderStatus({ data }: OrderStatusProps) {
                 itemStyle={{ color: "var(--color-foreground)", fontSize: "12px" }}
               />
             </PieChart>
+            ) : <div />}
           </ResponsiveContainer>
         </div>
       </div>

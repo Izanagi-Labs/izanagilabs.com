@@ -1,15 +1,22 @@
 "use client"
 
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
+import { useInView, useReducedMotion } from "motion/react"
+import { useRef } from "react"
 
 interface RevenueChartProps {
   data: { date: string; revenue: number }[]
 }
 
 export default function RevenueChart({ data }: RevenueChartProps) {
+  const ref = useRef<HTMLDivElement>(null)
+  const inView = useInView(ref, { once: true, amount: 0.5 })
+  const reducedMotion = useReducedMotion()
+
   return (
-    <div className="h-[140px] w-full mt-2">
+    <div ref={ref} className="h-[140px] w-full mt-2">
       <ResponsiveContainer width="100%" height="100%">
+        {inView ? (
         <AreaChart data={data} margin={{ top: 5, right: 0, left: -20, bottom: 0 }}>
           <defs>
             <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
@@ -54,8 +61,12 @@ export default function RevenueChart({ data }: RevenueChartProps) {
             strokeWidth={2}
             fillOpacity={1} 
             fill="url(#colorRevenue)" 
+            isAnimationActive={!reducedMotion}
+            animationDuration={1200}
+            animationBegin={100}
           />
         </AreaChart>
+        ) : <div />}
       </ResponsiveContainer>
     </div>
   )

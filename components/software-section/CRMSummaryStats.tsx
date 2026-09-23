@@ -1,5 +1,6 @@
 import { Users, Clock, FileText, CheckCircle2 } from "lucide-react"
 import { DateRange } from "../dashboard-section/data"
+import { AnimatedValue } from "../dashboard-section/AnimatedValue"
 
 interface CRMSummaryStatsProps {
   dateRange?: DateRange
@@ -20,14 +21,16 @@ export function CRMSummaryStats({ dateRange = "30d" }: CRMSummaryStatsProps) {
       {stats.map((stat) => {
         const Icon = stat.icon
         return (
-          <div key={stat.label} className="bg-surface-raised border border-border rounded-lg p-2.5 flex flex-col justify-between shadow-sm group hover:border-border-subtle transition-colors">
+          <div key={stat.label} className="bg-surface-raised border border-border rounded-lg p-2.5 flex flex-col justify-between shadow-sm group transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-border-subtle">
             <div className="flex justify-between items-start mb-1.5">
               <span className="text-[11px] font-medium text-foreground-muted">{stat.label}</span>
               <div className={`w-6 h-6 rounded flex items-center justify-center ${stat.bg}`}>
                 <Icon className={`w-3.5 h-3.5 ${stat.color}`} />
               </div>
             </div>
-            <span className="text-base font-semibold text-foreground tracking-tight">{stat.value}</span>
+            <span className="text-base font-semibold text-foreground tracking-tight">
+              <AnimatedValue value={stat.value} />
+            </span>
           </div>
         )
       })}
