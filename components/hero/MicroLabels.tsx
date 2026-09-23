@@ -38,7 +38,7 @@ export function MicroLabels() {
       </div>
 
       {/* Bottom Left - Handwritten notes */}
-      <div className="absolute top-[380px] left-[20px] flex flex-col -rotate-6 text-foreground-muted font-annotation text-[22px] leading-tight">
+      <div className="absolute top-[380px] left-[20px] flex flex-col gap-2 -rotate-6 text-foreground-muted font-annotation text-[22px] leading-tight">
         <span className="block">Spreadsheets...</span>
         <span className="block">Different tools...</span>
         <span className="block">Manual work...</span>
