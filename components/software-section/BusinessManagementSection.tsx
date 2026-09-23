@@ -99,14 +99,14 @@ export function BusinessManagementSection() {
             </motion.div>
 
             <div className="flex flex-col gap-2 relative z-10">
-              <span className="text-label text-[#707070]">02 &mdash; BUSINESS MANAGEMENT SOFTWARE</span>
+              <span className="text-label text-[#707070]">02 &mdash; CUSTOM SOFTWARE &amp; BUSINESS AUTOMATION</span>
               <h2 className="text-display-lg font-serif text-foreground leading-tight tracking-tight mt-4">
                 One system.<br/>Your entire business.
               </h2>
             </div>
             
-            <p className="text-body-lg text-foreground-muted relative z-10 mt-4">
-              Manage customers, enquiries, quotations, follow-ups, jobs, invoices and payments without jumping between tools.
+            <p className="text-body-lg text-foreground-muted relative z-10 mt-4 leading-relaxed">
+              Custom software built around the way your business actually works. Bring CRM, enquiries, quotations, billing and everyday business workflows into one connected system.
             </p>
             
             <div className="my-8 relative z-10">

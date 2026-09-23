@@ -31,15 +31,15 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.izanagilabs.com"),
   title: {
-    default: "Izanagi Labs — Websites, Software & Digital Growth",
+    default: "Izanagi Labs | Custom Software, Web Development & Digital Growth",
     template: "%s | Izanagi Labs",
   },
-  description: "Izanagi Labs designs and builds high-performance websites, custom software and digital growth systems for modern businesses.",
+  description: "Izanagi Labs is a Nashik based development and growth studio building custom software, high performance websites and digital growth solutions for businesses across India.",
   openGraph: {
     type: "website",
     siteName: "Izanagi Labs",
-    title: "Izanagi Labs — Websites, Software & Digital Growth",
-    description: "Izanagi Labs designs and builds high-performance websites, custom software and digital growth systems for modern businesses.",
+    title: "Izanagi Labs | Custom Software, Web Development & Digital Growth",
+    description: "Izanagi Labs is a Nashik based development and growth studio building custom software, high performance websites and digital growth solutions for businesses across India.",
     url: "https://www.izanagilabs.com",
     images: [
       {
@@ -52,8 +52,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Izanagi Labs — Websites, Software & Digital Growth",
-    description: "Izanagi Labs designs and builds high-performance websites, custom software and digital growth systems for modern businesses.",
+    title: "Izanagi Labs | Custom Software, Web Development & Digital Growth",
+    description: "Izanagi Labs is a Nashik based development and growth studio building custom software, high performance websites and digital growth solutions for businesses across India.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -84,6 +84,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   "name": "Izanagi Labs",
                   "url": "https://www.izanagilabs.com",
                   "email": "hello@izanagilabs.com",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Nashik",
+                    "addressRegion": "Maharashtra",
+                    "addressCountry": "IN"
+                  },
                   "logo": {
                     "@type": "ImageObject",
                     "url": "https://www.izanagilabs.com/logo.png"

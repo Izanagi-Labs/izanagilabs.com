@@ -63,8 +63,8 @@ export function ProcessSection() {
               </h2>
             </div>
             
-            <p className="text-body-lg text-foreground-muted relative z-10 mt-4">
-              Manage inventory, planning, production,<br/>quality and dispatch through one<br/>connected system.
+            <p className="text-body-lg text-foreground-muted relative z-10 mt-4 leading-relaxed">
+              Custom software and business automation for manufacturing. Connect inventory, planning, production, quality and dispatch through one system.
             </p>
             
             <div className="my-8 relative z-10">

@@ -127,7 +127,7 @@ export function Footer() {
           <div className="flex gap-6 sm:gap-8 text-[10px] tracking-[0.15em] uppercase text-[#F4F5F0]/50">
             <Link href="/privacy" className="hover:text-[#F4F5F0] transition-colors">PRIVACY</Link>
             <Link href="/terms" className="hover:text-[#F4F5F0] transition-colors">TERMS</Link>
-            <span className="flex items-center gap-1">INDIA ↗</span>
+            <span className="flex items-center gap-1">NASHIK, MAHARASHTRA, INDIA ↗</span>
           </div>
         </div>
       </div>

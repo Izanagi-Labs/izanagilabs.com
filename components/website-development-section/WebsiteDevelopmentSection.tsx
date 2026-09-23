@@ -42,7 +42,7 @@ export function WebsiteDevelopmentSection() {
             </div>
             
             <p className="text-body-lg text-foreground-muted relative z-10 mt-4 leading-relaxed">
-              We design and build distinctive websites that are fast, responsive and built around your business.
+              We provide custom website development for modern businesses, designing high performance, responsive websites that make a lasting impression.
             </p>
             
             <div className="my-8 relative z-10">

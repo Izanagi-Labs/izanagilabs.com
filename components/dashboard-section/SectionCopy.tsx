@@ -10,8 +10,8 @@ export function SectionCopy() {
         </h2>
       </div>
       
-      <p className="text-body-lg text-foreground-muted relative z-10">
-        Custom dashboards and internal tools that turn your business data into decisions.
+      <p className="text-body-lg text-foreground-muted relative z-10 leading-relaxed">
+        We build custom dashboards and internal business tools that turn your data into actionable analytics and insights.
       </p>
       
       <div className="my-6 relative z-10">

@@ -22,7 +22,7 @@ export function AISEOSection() {
             </div>
             
             <p className="text-body-lg text-foreground-muted relative z-10 mt-4 leading-relaxed">
-              We structure your website for people, search engines and AI systems &mdash; combining technical SEO, content strategy and machine-readable information.
+              We structure your website for people, search engines and AI systems. Our SEO services combine technical SEO, structured data and content strategy to drive organic visibility and search discovery.
             </p>
             
             <div className="my-8 relative z-10">

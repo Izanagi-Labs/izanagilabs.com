@@ -13,7 +13,7 @@ export function HeroValueProposition() {
         transition={{ duration: 0.4, delay: 0.1 }}
         className="text-system-sm text-[#707070] mb-6 lg:mb-8"
       >
-        Custom solutions, clear systems
+        CUSTOM SOFTWARE &middot; WEB DEVELOPMENT &middot; DIGITAL GROWTH
       </motion.p>
       
       <motion.h1 
@@ -29,9 +29,9 @@ export function HeroValueProposition() {
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.25 }}
-        className="text-system-lg text-foreground-muted mb-8 lg:mb-12"
+        className="text-system-lg text-foreground-muted mb-8 lg:mb-12 leading-relaxed"
       >
-        Web &middot; Mobile &middot; Software &middot; AI
+        Izanagi Labs is a Nashik based development and growth studio building custom software, high performance websites and digital growth systems for businesses across India.
       </motion.p>
       
       <motion.div
