@@ -6,7 +6,7 @@ export function HeroHeader() {
     <header className="flex justify-between items-center w-full px-[4vw] py-8 border-b border-black/10">
       <div className="flex items-center gap-4">
         <div className="relative w-12 h-8">
-          <Image src="/logo-new.png" alt="Izanagi Labs" fill sizes="48px" className="object-contain scale-110" />
+          <Image src="/logo.png" alt="Izanagi Labs" fill sizes="48px" className="object-contain scale-110" />
         </div>
         <span className="text-body-md font-bold tracking-[0.2em] lg:tracking-[0.25em] uppercase text-foreground">
           Izanagi Labs

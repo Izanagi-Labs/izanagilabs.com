@@ -35,7 +35,7 @@ export const IzanagiNode = React.forwardRef<HTMLDivElement, IzanagiNodeProps>(({
       />
       
       <div className="relative w-10 h-6 mb-2">
-         <Image src="/logo-new.png" alt="Izanagi Labs" fill sizes="40px" className="object-contain scale-125" />
+         <Image src="/logo.png" alt="Izanagi Labs" fill sizes="40px" className="object-contain scale-125" />
       </div>
       <span className="text-label text-foreground">
         Izanagi

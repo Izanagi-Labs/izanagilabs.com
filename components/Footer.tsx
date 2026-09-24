@@ -10,7 +10,7 @@ export function Footer() {
           <div className="flex flex-row items-center gap-4">
             <div className="relative w-12 h-8">
               <Image 
-                src="/logo-new.png" 
+                src="/logo.png" 
                 alt="Izanagi Labs" 
                 fill
                 sizes="48px" 
