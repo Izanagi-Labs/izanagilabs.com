@@ -53,31 +53,68 @@ export function ProcessStages() {
   ]
 
   return (
-    <div 
-      className="w-full grid items-start gap-x-2 lg:gap-x-4 h-full"
-      style={{ gridTemplateColumns: 'minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1.2fr) auto minmax(0,1fr) auto minmax(0,1fr)' }}
-    >
-      {stages.map((stage, index) => {
-        const isLast = index === stages.length - 1
-        return (
-          <React.Fragment key={stage.id}>
-            <div className="flex items-start gap-1.5 min-w-0">
-              {stage.icon}
-              <div className="flex flex-col min-w-0">
-                <span className={`text-[11px] font-bold leading-tight truncate ${stage.status === 'pending' ? 'text-foreground-faint' : 'text-foreground'}`}>
-                  {stage.title}
-                </span>
+    <>
+      {/* Mobile Timeline */}
+      <div className="flex w-full items-start justify-between md:hidden relative isolate pt-1">
+        {stages.map((stage, index) => {
+          const isCompleted = stage.status === 'completed';
+          const isLast = index === stages.length - 1;
+          
+          return (
+            <div key={`mobile-${stage.id}`} className="flex-1 flex flex-col items-center relative">
+              {/* Connector line */}
+              {!isLast && (
+                 <div 
+                    className={`absolute top-[10px] left-[50%] w-full h-[1.5px] ${isCompleted ? 'bg-emerald-500' : 'bg-border'}`} 
+                    style={{ zIndex: -1 }} 
+                 />
+              )}
+              
+              {/* Icon wrapper to hide line */}
+              <div className="bg-surface relative px-1.5 mb-1.5 flex items-center justify-center shrink-0">
+                 {stage.icon}
+              </div>
+              
+              {/* Labels */}
+              <span className={`text-[10.5px] font-bold leading-tight text-center break-words px-0.5 ${stage.status === 'pending' ? 'text-foreground-faint' : 'text-foreground'}`}>
+                {stage.title === 'Quality' ? 'QC' : stage.title}
+              </span>
+              
+              <div className="w-full flex justify-center text-center [&>span]:text-center [&>span]:w-full [&>span]:break-words">
                 {stage.content}
               </div>
             </div>
-            {!isLast && (
-              <div className="flex items-center justify-center h-5 shrink-0 text-border">
-                <ArrowRight className="w-3 h-3 stroke-[2]" />
+          )
+        })}
+      </div>
+
+      {/* Desktop Timeline */}
+      <div 
+        className="hidden md:grid w-full items-start gap-x-2 lg:gap-x-4 h-full"
+        style={{ gridTemplateColumns: 'minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1.2fr) auto minmax(0,1fr) auto minmax(0,1fr)' }}
+      >
+        {stages.map((stage, index) => {
+          const isLast = index === stages.length - 1
+          return (
+            <React.Fragment key={stage.id}>
+              <div className="flex items-start gap-1.5 min-w-0">
+                {stage.icon}
+                <div className="flex flex-col min-w-0">
+                  <span className={`text-[11px] font-bold leading-tight truncate ${stage.status === 'pending' ? 'text-foreground-faint' : 'text-foreground'}`}>
+                    {stage.title}
+                  </span>
+                  {stage.content}
+                </div>
               </div>
-            )}
-          </React.Fragment>
-        )
-      })}
-    </div>
+              {!isLast && (
+                <div className="flex items-center justify-center h-5 shrink-0 text-border">
+                  <ArrowRight className="w-3 h-3 stroke-[2]" />
+                </div>
+              )}
+            </React.Fragment>
+          )
+        })}
+      </div>
+    </>
   )
 }

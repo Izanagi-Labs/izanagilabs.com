@@ -22,7 +22,7 @@ export function BusinessManagementSection() {
         className="flex flex-col-reverse lg:flex-row gap-12 lg:gap-16 xl:gap-24 items-center relative z-10"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.25 }}
+        viewport={{ once: true, margin: "0px 0px -15% 0px" }}
         variants={{
           visible: { transition: { staggerChildren: 0.15 } }
         }}

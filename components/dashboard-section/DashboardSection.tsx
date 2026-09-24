@@ -23,7 +23,7 @@ export function DashboardSection() {
         className="flex flex-col xl:flex-row gap-12 xl:gap-15 items-center relative z-10"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.25 }}
+        viewport={{ once: true, margin: "0px 0px -15% 0px" }}
         variants={{
           visible: { transition: { staggerChildren: 0.15 } }
         }}

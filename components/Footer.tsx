@@ -8,12 +8,13 @@ export function Footer() {
         {/* Top: Logo */}
         <div className="mb-12 lg:mb-16">
           <div className="flex flex-row items-center gap-4">
-            <div className="relative w-8 h-8 ">
+            <div className="relative w-12 h-8">
               <Image 
-                src="/logo.png" 
+                src="/logo-new.png" 
                 alt="Izanagi Labs" 
-                fill 
-                className="object-contain" 
+                fill
+                sizes="48px" 
+                className="object-contain scale-110" 
               />
             </div>
             <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-[#F4F5F0]/90">
